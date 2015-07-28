@@ -29,5 +29,4 @@ describe('Connection', function() {
     var someConnection = new Connection(aNode, 'fluf cats')
     expect(someConnection.test('foo dogs')).to.be.false
   })
-
 })

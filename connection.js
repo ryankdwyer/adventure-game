@@ -1,18 +1,10 @@
 var Connection = function(nextNode, condition) {
-  this.condition = condition;
   this.nextNode = nextNode;
+  this.condition = condition;
 };
 
-Connection.prototype.test = function (input) {
-  if(this.condition === undefined){
-    return true;
-  }
-  if (input === this.condition){
-    return true;
-  }
-  if (input != this.condition){
-    return false;
-  }
+Connection.prototype.test = function (condition) {
+  return this.condition == condition || !this.condition; 
 }
 
 module.exports = Connection;
